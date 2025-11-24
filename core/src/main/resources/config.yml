@@ -7,6 +7,8 @@
 #
 # prtprotect.command = Permission to run /protect
 # prtprotect.command.reload = Permission to run /protect reload
+#
+# prtprotect.bypass = Permission to bypass checks
 
 
 #
