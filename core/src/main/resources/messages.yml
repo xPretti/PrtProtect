@@ -1,0 +1,21 @@
+#
+# Messages options
+#
+messages:
+  help:
+  - ''
+  - '&6&lPrtProtect &7- &eHelp commands:'
+  - ''
+  - '&6* &e/protect reload &f= &7Reload the plugin'
+  - ''
+
+  no-permission: '&4&lPROTECT &4» &cYou do not have permission to perform this action!'
+
+  reload: '&2&lPROTECT &2» &7Plugin reloaded!'
+  reload-error: '&4&lPROTECT &4» &cFailed to reload plugin! Check the console for more information!'
+
+  # Use 'none' or '' to disable the message
+  interact-block-blocked: '&4&lPROTECT &4» &cYou cannot interact with this block.'
+  interact-entity-blocked: '&4&lPROTECT &4» &cYou cannot interact with this entity.'
+  interact-item-blocked: '&4&lPROTECT &4» &cYou cannot interact with this item.'
+  craft-blocked: 'none'
