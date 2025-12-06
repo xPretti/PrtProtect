@@ -1,0 +1,53 @@
+/*
+ * Definições
+ */
+apply from: rootProject.file('defines.gradle')
+
+/**
+ * TASKS
+ */
+tasks.build.dependsOn('shadowJar')
+
+tasks.named('compileJava') {
+    dependsOn ':core:shadowJar'
+}
+
+tasks.named('build') {
+    dependsOn ':core:shadowJar'
+}
+
+
+/**
+ * REPOSITORIES
+ */
+repositories {
+}
+
+dependencies {
+    api project(':core')
+
+    // Spigot
+    compileOnly 'org.spigotmc:spigot-api:1.21-R0.1-SNAPSHOT'
+}
+
+/**
+ * COMPILER PROPERTIES
+ */
+shadowJar {
+    archiveFileName = DEF_FINAL_NAME
+
+    mergeServiceFiles()
+}
+
+/*
+ * COMPILADO EM JAVA 17
+ */
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 17
+}

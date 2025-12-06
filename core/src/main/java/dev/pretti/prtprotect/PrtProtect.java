@@ -7,6 +7,7 @@ import dev.pretti.prtprotect.listeners.PlayerListener;
 import dev.pretti.prtprotect.managers.BlockedManager;
 import dev.pretti.prtprotect.utils.LogUtils;
 import dev.pretti.prtprotect.utils.SystemUtils;
+import dev.pretti.prtprotect.versions.VersionsManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -14,8 +15,9 @@ public class PrtProtect extends JavaPlugin
 {
   private static PrtProtect instance;
 
-  private final BlockedManager blockedManager = new BlockedManager();
-  private       ConfigManager  configManager;
+  private final BlockedManager  blockedManager = new BlockedManager();
+  private       ConfigManager   configManager;
+  private final VersionsManager versionsManager = new VersionsManager();
 
   private boolean isInitialized;
 
@@ -109,6 +111,7 @@ public class PrtProtect extends JavaPlugin
   protected void registerEvents() {
     Bukkit.getPluginManager().registerEvents(new PlayerListener(this), this);
     Bukkit.getPluginManager().registerEvents(new CraftListener(this), this);
+    versionsManager.loadListeners();
   }
 
   /**

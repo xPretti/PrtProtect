@@ -10,13 +10,19 @@
 #
 # prtprotect.bypass = Permission to bypass checks
 
+#
+# Materials
+# 1.8 = https://helpch.at/docs/1.8/index.html?org/bukkit/Material.html
+# latest = https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
 
 #
 # Block interaction options
 # Use [] to disable checks
 #
 interact-entity-blocked:
-- 'BOAT'
+- 'VILLAGER'
+#- 'BOAT'
+#- 'OAK_BOAT'
 
 interact-block-blocked:
 - 'HOPPER'
@@ -24,23 +30,17 @@ interact-block-blocked:
 interact-item-blocked:
 - 'ENDER_PEARL'
 
+# Block player crafting (1.8+)
+# Block auto-crafting (spigot 1.21+)
 craft-blocked:
 - 'ARMOR_STAND'
 - 'TRIPWIRE_HOOK'
-- 'PISTON_STICKY_BASE'
-- 'PISTON_BASE'
-- 'REDSTONE_TORCH_ON'
 - 'DROPPER'
 - 'DISPENSER'
 - 'NOTE_BLOCK'
 - 'TNT'
-- 'DIODE'
-- 'REDSTONE_COMPARATOR'
 - 'DAYLIGHT_DETECTOR'
 - 'MINECART'
-- 'BOAT'
-- 'BOOK_AND_QUILL'
 - 'JUKEBOX'
 - 'HOPPER'
 - 'BEACON'
-- 'BED'
